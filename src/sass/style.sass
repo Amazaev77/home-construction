@@ -1,0 +1,716 @@
+@mixin btn
+  width: 150px
+  height: 50px
+  text-align: center
+  color: white
+  border-radius: 3px
+  background-color: #f7b446
+  display: block
+  font-size: 17px
+  cursor: pointer
+  padding: 14px 0
+  font-weight: 300
+  border: 0
+  outline: none !important
+
+$color_orange: #f7b446
+$color_black: #39374d
+
+.title
+  font-size: 39px
+  font-weight: 500
+.title_orange
+  color: $color_orange
+.title_black
+  color: $color_black
+.subtitle
+  color: #5e5d6c
+  font-size: 18px
+  font-weight: 400
+  line-height: 28px
+
+.btn_white
+  @include btn
+  background-color: white
+  color: black
+
+.btn_orange
+  @include btn
+  background-color: $color_orange
+  color: white
+
+
+.squares
+  margin: 10px 0 39px
+  display: flex
+  &_item
+    width: 10px
+    height: 10px
+    margin-right: 3px
+    background-color: #f7b446
+*
+  font-family: 'Roboto', sans-serif
+.btn_orange
+  @include btn
+
+.header
+  position: absolute
+  width: 100%
+  &_top
+    a:hover
+      color: #cbcbcb
+  &_socials
+    display: flex
+    &_link
+      color: white
+      border-left: 1px solid #425473
+      i
+        padding: 14px 22px
+    &_link:last-child
+      border-right: 1px solid #425473
+  &_line
+    background-color: #425473
+    width: 100%
+    height: 1px
+  &_info
+    display: flex
+    height: 100%
+    &_link
+      color: white
+      border-left: 1px solid #425473
+      span
+        display: block
+        padding: 11px 22px
+        font-size: 13px
+        font-weight: 400
+    &_link:last-child
+      color: #f7b446
+    &_link:last-child:hover
+      color: #e29b28 !important
+  &_main
+    padding: 19px 0
+    .header_logo
+      &_img
+        margin-right: 10px
+  nav
+    position: relative
+    height: 100%
+    .header_menu
+      position: absolute
+      margin: auto
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      display: flex
+      justify-content: center
+      align-items: center
+      list-style-type: none
+      &_item
+        margin-right: 25px
+        a
+          color: white
+      &_item:first-child:after
+        content: url("../icons/caret.svg")
+        display: inline-block
+        color: white
+        margin-left: 7px
+        margin-bottom: 3px
+  &_panel
+    display: flex
+    justify-content: flex-end
+    &_cart, &_search
+      margin-right: 29px
+      align-self: center
+      cursor: pointer
+    &_cart
+      position: relative
+      &_counter
+        width: 20px
+        height: 20px
+        background-color: #28c23e
+        text-align: center
+        line-height: 20px
+        border-radius: 100%
+        color: white
+        position: absolute
+        top: -7px
+        left: 5px
+        font-size: 12px
+    &_btn
+      @include btn
+      border: 1px solid white
+      background: none
+
+.innovation
+  min-height: 1080px
+  background: url('../img/bg_header.jpg') center center/cover no-repeat
+  padding-top: 355px
+  &_title
+    font-size: 85px
+    text-align: center
+    font-weight: 500
+    color: #ffffff
+    line-height: 90px
+    span
+      color: #f7b446
+      border-bottom: 3px solid #f7b446
+  &_subtitle
+    font-size: 22px
+    font-weight: 400
+    line-height: 35px
+    color: white
+    width: 711px
+    margin: 25px auto
+    text-align: center
+  &_buttons
+    display: flex
+    justify-content: center
+    .btn_orange
+      @include btn
+      margin-right: 9px
+  &_discover
+    margin: 235px 0 10px
+    color: white
+    font-size: 14px
+    font-weight: 400
+    text-align: center
+  &_divide
+    width: 1px
+    height: 120px
+    background-color: #f7b446
+    margin: auto
+
+.offering
+  position: relative
+  padding: 100px 0
+  min-height: 650px
+  .offering_about_us
+    display: block
+    position: absolute
+    width: 47%
+    top: 50px
+    left: 50px
+  .dots
+    display: block
+    position: absolute
+    top: -60px
+    right: -100px
+  &_inner
+    padding: 50px 70px 23px 0
+  .title
+    line-height: 50px
+  .subtitle
+    margin-bottom: 44px
+  &_play_block
+    height: 100%
+    position: relative
+    &_bg
+      width: 100%
+      border-radius: 3px
+      filter: brightness(65%) contrast(110%)
+  &_play
+    background-color: #f7b446
+    position: absolute
+    top: 0
+    bottom: 0
+    right: 0
+    left: 0
+    margin: auto
+    border-radius: 100%
+    cursor: pointer
+    width: 90px
+    height: 90px
+    text-align: center
+    line-height: 90px
+    box-shadow: 0 0 0 8px #f7b44685
+.team
+  min-height: 430px
+  padding-top: 100px
+  background-color: #f7f9fa
+  position: relative
+  &_item
+    border-radius: 5px
+    border: 1px solid #e7e7e7
+    background: white
+    cursor: pointer
+    transition: .2s all
+    position: relative
+    z-index: 1
+    overflow: hidden
+    &_wrap
+      padding: 39px 54px 45px 34px
+    img
+      filter: brightness(60%) contrast(110%)
+      position: absolute
+      display: none
+      width: 100%
+      height: 100%
+      z-index: -1
+      transition: .2s all
+    &:hover .team_item_bg
+      display: block
+
+
+    &_title
+      font-size: 28px
+      font-weight: 500
+      color: #39374d
+      transition: .5s all
+    &_subtitle
+      color: #5e5d6c
+      font-size: 14px
+      font-weight: 400
+      line-height: 23px
+      margin: 23px 0 36px
+      transition: .5s all
+    &_learn_more
+      display: inline-block
+      color: #777777
+      font-size: 18px
+      font-weight: 500
+      transition: .5s all
+    &_line
+      width: 20px
+      background-color: #777777
+      height: 2px
+      transition: .5s all
+  &_item:hover
+    transform: translateY(-10px)
+    border: none
+    border-bottom: 11px solid #f7f9fa
+  &_item:hover .team_item_title,
+  &_item:hover .team_item_subtitle
+    color: white
+  &_item:hover .team_item_learn_more
+    color: #f7b446
+  &_item:hover .team_item_line
+    background-color: #f7b446
+    width: 100%
+
+.services
+  position: relative
+  &_our_services
+    display: block
+    position: absolute
+    top: 49px
+    left: 0
+    right: 0
+    margin: auto
+  padding: 99px 0 70px
+  .squares
+    justify-content: center
+  .title
+    text-align: center
+  .subtitle
+    width: 718px
+    margin: auto
+    text-align: center
+  .row
+    margin-top: 88px
+    margin-bottom: 67px
+    min-height: 465px
+    align-items: center
+  &_item
+    width: 370px
+    border-radius: 5px
+    border-bottom: 1px solid #e7e7e7
+    cursor: pointer
+    position: relative
+    z-index: 1
+    bottom: 0
+    transition: .2s all
+    &_wrapper
+      border-left: 1px solid #e7e7e7
+      border-right: 1px solid #e7e7e7
+      background-color: white
+    &:hover
+      border-bottom: 5px solid $color_orange
+      transform: translateY(-5px)
+    &:hover &_arrow
+      color: $color_orange
+    img
+      width: 100%
+      height: 200px
+      border-radius: 5px 5px 0 0
+    &_title
+      margin: 0 0 24px
+      color: $color_black
+      padding: 30px 35px 0
+    &_subtitle
+      color: #748494
+      padding: 0 35px
+      margin-bottom: 35px
+    &_arrow
+      padding-bottom: 34px
+      text-align: end
+      font-size: 25px
+      padding-right: 35px
+  .btn_orange
+    display: block
+    margin: auto
+  .dots
+    position: absolute
+    bottom: 120px
+    left: 15%
+    z-index: -1
+.company
+  position: relative
+  padding-top: 100px
+  min-height: 710px
+  background: url("../img/bg_company.jpg") center center/cover no-repeat
+  text-align: center
+  color: white
+  &_title
+    margin: 36px 0 30px
+    font-size: 52px
+    font-weight: 400
+  &_subtitle
+    font-size: 22px
+    margin-bottom: 24px
+    font-weight: 500
+  &_descr
+    font-size: 16px
+    line-height: 26px
+    font-weight: 400
+  &_orange_block
+    background: url("../img/orange_bg.svg") center center/cover no-repeat
+    padding: 70px 0
+    position: relative
+    bottom: -86px
+    z-index: 1
+    div
+      color: white
+      font-weight: 300
+      font-size: 46px
+      line-height: 62px
+      margin: 0 auto 38px
+      width: 673px
+    span
+      font-weight: 500
+    .btn_white
+      margin: auto
+      display: block
+.work
+  min-height: 1050px
+  padding: 91px 0 100px
+  position: relative
+  background-color: #fefeff
+  .row
+    margin-bottom: 99px
+  &_our_work
+    position: absolute
+    left: 63px
+    width: 50%
+  .title
+    line-height: 52px
+    margin-top: 85px
+    display: flex
+    justify-content: space-between
+  .btn_orange
+    transform: translateY(50%)
+    align-self: flex-end
+    padding: 0
+    transition: .2s all
+    border: 2px solid $color_orange
+    background-color: white
+    color: $color_orange
+    &:hover
+      color: white
+      background-color: $color_orange
+      border: 2px solid white
+      border-radius: 4px
+  &_item
+    width: 550px
+    height: 450px
+    cursor: pointer
+    &:hover &_btn
+      color: #f7b446
+      transform: translateY(-75px)
+    img
+      width: 100%
+      height: 410px
+      border-radius: 4px
+    &_btn
+      width: 470px
+      height: 100px
+      padding: 25px 35px 0 34px
+      background-color: #fff
+      position: absolute
+      bottom: 0
+      left: 0
+      right: 0
+      margin: auto
+      border-radius: 5px
+      transition: .4s all
+      box-shadow: 0 10px 90px rgba(110, 123, 131, 0.1)
+      div:first-child
+        font-size: 22px
+        font-weight: 400
+      div:last-child
+        text-align: end
+  &_icons
+    img:not(:last-child)
+      margin-right: 75px
+      margin-bottom: 15px
+.testimonials
+  background-color: #f7f9fa
+  padding-top: 38px
+  min-height: 652px
+  position: relative
+  .row
+    transform: translateY(100px)
+  &_bg
+    display: block
+    position: absolute
+    left: 20px
+    width: 95%
+    z-index: -1
+  .title
+    padding-top: 50px
+    text-align: center
+  .squares
+    justify-content: center
+  .subtitle
+    text-align: center
+    width: 718px
+    margin: auto
+  &_item
+    box-shadow: 0 5px 90px rgba(110, 123, 131, 0.1)
+    padding: 34px 54px 50px 36px
+    background-color: #fff
+    border-radius: 5px
+    &_quotes
+      margin-bottom: 29px
+    &_descr
+      color: #5e5d6c
+      font-size: 16px
+      font-weight: 400
+      line-height: 26px
+      margin-bottom: 37px
+    &_user
+      display: flex
+      &>div
+        align-self: center
+      img
+        width: 60px
+        height: 60px
+        margin-right: 15px
+        border-radius: 100%
+      &_name
+        color: #39374d
+        font-size: 14px
+        font-weight: 500
+        margin-bottom: 9px
+    &_stars
+      color: #f6a46a
+.building
+  display: block
+  position: relative
+  padding: 250px 0 277px
+  &_long
+    div
+      position: relative
+      img:first-child
+        position: absolute
+        z-index: -1
+        top: -48px
+        left: -95px
+      img:last-child
+        filter: brightness(90%)
+        width: 100%
+        height: 570px
+        border-radius: 4px
+  &_wide
+    padding: 50px 0 0 32px
+    border-radius: 5px
+    .title
+      margin-bottom: 40px
+    &_question
+      border-radius: 5px
+      border: 1px solid #c5e0f8
+      padding: 23px 0 20px 30px
+      font-size: 18px
+      color: #39374d
+      font-weight: 500
+      background-color: #ffffff
+      margin-bottom: 15px
+      cursor: pointer
+      transition: .2s all
+      &:hover
+        background: $color_orange
+        color: white
+        border: 1px solid $color_orange
+  &_orange_block
+    background: #f7b446
+    max-width: 770px
+    border-radius: 8px
+    width: 100%
+    margin: auto
+    padding: 60px 0 50px 0
+    position: absolute
+    left: 0
+    right: 0
+    bottom: -86px
+    z-index: 1
+    img:first-child
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      right: 0
+      width: 100%
+    &_title
+      color: #ffffff
+      font-size: 33px
+      font-weight: 500
+      text-align: center
+    &_subtitle
+      margin-bottom: 56px
+      color: #ffffff
+      font-size: 17px
+      font-weight: 400
+      text-align: center
+    &_form
+      max-width: 570px
+      width: 100%
+      margin: auto
+      position: relative
+      input
+        display: block
+        padding-left: 30px
+        height: 50px
+        border-radius: 25px
+        outline: none
+        border: none
+        box-shadow: 0 10px 20px rgba(110, 123, 131, 0.1)
+        width: 100%
+        ::placeholder
+          font-size: 14px
+          font-weight: 400
+      &_btn
+        display: block
+        position: absolute
+        line-height: 40px
+        right: 5px
+        top: 5px
+        width: 120px
+        height: 40px
+        border-radius: 20px
+        background-color: #7540ee
+        border: none
+        outline: none !important
+        color: white
+    &_dots
+      display: block
+      position: absolute
+      right: -55px
+      bottom: -95px
+.footer
+  min-height: 557px
+  background-color: #f5fbfc
+  padding: 200px 0 23px
+  &_socials
+    max-width: 280px
+    &_descr
+      margin: 45px 0 44px
+      font-size: 14px
+      font-weight: 400
+      line-height: 23px
+      color: #5e5d6c
+    &_icons
+      display: flex
+      a
+        display: block
+        width: 50px
+        height: 50px
+        border-radius: 100%
+        margin-right: 15px
+        cursor: pointer
+        text-align: center
+        line-height: 50px
+        border: 1px solid #c4c4c4
+        color: #c4c4c4
+        transition: .2s all
+        &:hover
+          color: white
+          border: 1px solid $color_orange
+          background-color: $color_orange
+  &_menu
+    &_item
+      a
+        transition: 90ms all
+      margin-top: 20px
+      &:first-child
+        margin-bottom: 25px
+        a
+          text-decoration: none
+          color: #39374d
+          font-size: 15px
+          font-weight: 500
+          &:hover
+            color: $color_orange
+            border-bottom: 2px solid $color_orange
+      &:not(:first-child)
+        a
+          text-decoration: none
+          color: #39374d
+          font-size: 14px
+          font-weight: 400
+          &:hover
+            color: $color_orange
+            border-bottom: 2px solid $color_orange
+  &_last_menu_item:last-child
+    a
+      color: $color_orange
+  &_last_menu_item:not(:first-child)
+    margin-top: 0
+  &_separator
+    width: 100%
+    margin-top: 76px
+    margin-bottom: 21px
+    height: 1px
+    background: #e2e7ea
+  &_bottom_info
+    display: flex
+    justify-content: space-between
+    div
+      color: #5e5d6c
+      &:first-child
+        font-size: 14px
+        font-weight: 400
+      &:last-child
+        font-size: 13px
+        span:first-child
+          &:after
+            content: "|"
+            font-size: 18px
+            margin-left: 4px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
